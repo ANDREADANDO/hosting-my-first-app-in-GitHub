@@ -18,7 +18,8 @@ This is a simple calculator app built using **Python** and **Streamlit**. It let
 6. Press the **Calculate** button.  
 7. The result will appear instantly below the button.  
 
-### By:
-Andrea Chloe G. Dando
+# Reflection
+I hosted my calculator app online using Streamlit Community Cloud. First, I uploaded my project to GitHub and made sure it had all the necessary files. I originally wrote my code in OnlineGDB using Python, then I asked AI to help convert it so it would work in Streamlit. Next, I connected the repository to Streamlit Cloud and clicked deploy to make it live. One of the challenges I faced was changing the code from using input() and print() to using Streamlit boxes and buttons. Hosting it online makes my app more useful because anyone can open it from a phone, tablet, or computer without downloading anything. Overall, it was fun to see my calculator working online.
 
-8 - Anthurium
+### By: Andrea Chloe G. Dando
+### From: 8 - Anthurium
