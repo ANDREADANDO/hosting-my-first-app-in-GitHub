@@ -1,26 +1,32 @@
-print("-----Calculator-----")
+import streamlit as st
 
-num1 = float(input("Enter first number: "))
-num2 = float(input("Enter second number: "))
+st.title("Calculator")
 
-print("Choose an operation:")
-print("1 - Add")
-print("2 - Subtract")
-print("3 - Multiply")
-print("4 - Divide")
+num1 = st.number_input("Enter first number", value=0.0)
+num2 = st.number_input("Enter second number", value=0.0)
 
-choice = input("Enter choice (1/2/3/4): ")
+st.write("Choose an operation:")
+operation = st.selectbox(
+    "Operation",
+    ("Add", "Subtract", "Multiply", "Divide")
+)
 
-if choice == "1":
-    print("Result:", num1 + num2)
-elif choice == "2":
-    print("Result:", num1 - num2)
-elif choice == "3":
-    print("Result:", num1 * num2)
-elif choice == "4":
-    if num2 != 0:
-        print("Result:", num1 / num2)
-    else:
-        print("Error: Cannot divide by zero")
-else:
-    print("Invalid choice")
+if st.button("Calculate"):
+    if operation == "Add":
+        result = num1 + num2
+        st.success(f"Result: {result}")
+
+    elif operation == "Subtract":
+        result = num1 - num2
+        st.success(f"Result: {result}")
+
+    elif operation == "Multiply":
+        result = num1 * num2
+        st.success(f"Result: {result}")
+
+    elif operation == "Divide":
+        if num2 != 0:
+            result = num1 / num2
+            st.success(f"Result: {result}")
+        else:
+            st.error("Error: Cannot divide by zero")
